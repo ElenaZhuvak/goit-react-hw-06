@@ -7,7 +7,7 @@ const SearchBox = () => {
 
   return (
     <div>
-      <p>Find contacts by name</p>
+      <p>Find contact by name</p>
       <input type="text" 
               value={filter} 
               onChange={(event) => dispatch(changeFilter(event.target.value))} />
