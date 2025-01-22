@@ -27,15 +27,15 @@ const Contact = ({ data: { id, name, number } }) => {
         </p>
       </div>
 
-      <div>
+      <div className={css.contactBtnContainer}>
         <button
-          className={css.contactBtnDelete}
+          className={css.contactBtn}
           onClick={() => dispatch(deleteContact(id))}
         >
           Delete <FaUserTimes className={css.iconBtn} />
         </button>
         <button
-          className={css.contactBtnDelete}
+          className={css.contactBtn}
           onClick={() => setIsModalOpen(true)}
         >
           Edit <FaEdit className={css.iconBtn} />

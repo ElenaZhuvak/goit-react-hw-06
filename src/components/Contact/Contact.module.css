@@ -27,17 +27,23 @@
 p {
     margin: 0;
 }
-.contactBtnDelete {
+.contactBtnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+.contactBtn {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgb(254, 254, 132);
     border-radius: 20px;
     border: solid 1px;
-    padding: 8px;
+    padding: 3px 8px;
 }
-.contactBtnDelete:hover,
-.contactBtnDelete:focus {
+.contactBtn:hover,
+.contactBtn:focus {
     background-color: orange;
     border: solid 1px black;
     color: white;

@@ -12,7 +12,7 @@
 }
 .editModal {
     position: relative;
-    background-color: white;
+    background-color:aliceblue;
     border-radius: 20px;
     padding: 40px;
     width: 100%;
@@ -49,18 +49,32 @@
     border-color: #46a5e5;
     box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
 }
-.modalInput::placeholder {
-    color: #9ca3af;
-}
 .modalBtnWrapper {
     display: flex;
     justify-content: center;
     gap: 50px;
     margin-top: 10px;
 }
-.modalBtn {
+.modalBtnCancel {
     border-radius: 12px;
     border: none;
     padding: 8px 18px;
+    background-color: #46a5e5;
+    color: white;
+    cursor: pointer;
+}
+.modalBtnCancel:hover {
+    background-color: #138fe2;
+}
+.modalBtnSave {
+    border-radius: 12px;
+    border: none;
+    padding: 8px 18px;
+    background-color:rgb(41, 185, 41);
+    color: white;
+    cursor: pointer;
 
+}
+.modalBtnSave:hover {
+    background-color: rgb(3, 156, 3);
 }

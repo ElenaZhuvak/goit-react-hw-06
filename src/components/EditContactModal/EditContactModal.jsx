@@ -9,7 +9,7 @@ const EditContactModal = ({ isOpen, onClose, contact, onSave }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    onSave({ id: contact.id, contact: { name, number } });
+    onSave({ id: contact.id, name, number });
     onClose();
   };
 
@@ -39,7 +39,7 @@ const EditContactModal = ({ isOpen, onClose, contact, onSave }) => {
             <button
               type="button"
               onClick={onClose}
-              className={css.modalBtn}>Cancel</button>
+              className={css.modalBtnCancel}>Cancel</button>
 
             <button
               type="submit"
