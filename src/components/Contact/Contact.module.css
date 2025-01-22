@@ -33,7 +33,16 @@ p {
     justify-content: center;
     gap: 8px;
 }
-.contactBtn {
+.contactBtnDelete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(252, 156, 156);
+    border-radius: 20px;
+    border: solid 1px;
+    padding: 3px 8px;
+}
+.contactBtnEdit {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,8 +51,8 @@ p {
     border: solid 1px;
     padding: 3px 8px;
 }
-.contactBtn:hover,
-.contactBtn:focus {
+.contactBtnDelete:hover,
+.contactBtnEdit:hover {
     background-color: orange;
     border: solid 1px black;
     color: white;

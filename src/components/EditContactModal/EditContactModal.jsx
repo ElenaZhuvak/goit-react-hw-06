@@ -1,17 +1,31 @@
 import { useState } from 'react';
 import css from './EditContactModal.module.css';
+import { nanoid } from 'nanoid';
+import { useSelector } from 'react-redux';
+import { selectContacts } from '../../redux/contactsSlice';
 
 const EditContactModal = ({ isOpen, onClose, contact, onSave }) => {
   const [name, setName] = useState(contact.name);
   const [number, setNumber] = useState(contact.number);
+  const contacts = useSelector(selectContacts)
 
   if (!isOpen) return null;
 
   const handleSubmit = e => {
     e.preventDefault();
+
+    const editedContact = contacts.some(existContact => existContact.id === contact.id && (existContact.name.toLowerCase() === name || existContact.number === number))
+    
+    if (editedContact) {
+      alert(`Contact with name ${name} or ${number} already exist`)
+      return
+    }
+
     onSave({ id: contact.id, name, number });
     onClose();
   };
+
+
 
   return (
     <div className={css.wrapper}>
@@ -43,7 +57,7 @@ const EditContactModal = ({ isOpen, onClose, contact, onSave }) => {
 
             <button
               type="submit"
-              className={css.modalBtn}>Save</button>
+              className={css.modalBtnSave}>Save</button>
           </div>
         </form>
         
