@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import css from './EditContactModal.module.css';
-import { nanoid } from 'nanoid';
 import { useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/contactsSlice';
 
